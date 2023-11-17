@@ -218,7 +218,7 @@ int write_unsgnd(int is_negative, int ind,
  *
  * Return: Number of written characters.
  */
-int write_pointer(char buffer[], int ind, int length,
+int write_pointer(char buffer[], int index, int length,
 		int width, int flags, char padd, char extra_c, __attribute__((unused)) int padd_start)
 {
 	int i;
