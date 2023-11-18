@@ -108,7 +108,6 @@ int write_unsgnd(int is_negative, int ind, char buffer[], int flags, int width, 
 /****************** UTILS ******************/
 int is_printable(char c);
 int append_hexa_code(char c, char buffer[], int index);
-int append_hexa_code(char ascii_code, char buffer[], int i)
 int is_digit(char);
 
 long int convert_size_number(long int num, int size);

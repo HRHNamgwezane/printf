@@ -232,29 +232,29 @@ int write_pointer(char buffer[], int index, int length,
 
 		if (flags & F_MINUS)
 		{
-			buffer[--ind] = 'x';
-			buffer[--ind] = '0';
+			buffer[--index] = 'x';
+			buffer[--index] = '0';
 
 			if (extra_c)
-				buffer[--ind] = extra_c;
-			return (write(1, &buffer[ind], length) + write(1, &buffer[3], i - 3));
+				buffer[--index] = extra_c;
+			return (write(1, &buffer[index], length) + write(1, &buffer[3], i - 3));
 		}
 		else
 		{
-			buffer[--ind] = 'x';
-			buffer[--ind] = '0';
+			buffer[--index] = 'x';
+			buffer[--index] = '0';
 
 			if (extra_c)
-				buffer[--ind] = extra_c;
-			return (write(1, &buffer[3], i - 3) + write(1, &buffer[ind], length));
+				buffer[--index] = extra_c;
+			return (write(1, &buffer[3], i - 3) + write(1, &buffer[index], length));
 		}
 	}
 
-	buffer[--ind] = 'x';
-	buffer[--ind] = '0';
+	buffer[--index] = 'x';
+	buffer[--index] = '0';
 
 	if (extra_c)
-		buffer[--ind] = extra_c;
+		buffer[--index] = extra_c;
 	
-	return (write(1, &buffer[ind], BUFF_SIZE - ind - 1));
+	return (write(1, &buffer[index], BUFF_SIZE - index - 1));
 }
